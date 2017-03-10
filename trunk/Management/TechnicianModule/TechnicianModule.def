@@ -1,0 +1,5 @@
+; TechnicianModule.def : Declares the module parameters for the DLL.
+
+LIBRARY      "TechnicianModule"
+EXPORTS
+    ; Explicit exports can go here

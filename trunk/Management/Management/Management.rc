@@ -1,0 +1,258 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\Management.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\Management.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 Management"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "Management Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2015",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_MANAGEMENT_DIALOG DIALOGEX 0, 0, 577, 362
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Management"
+FONT 10, "宋体", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "实时房态",IDC_BTN_ACTUL_ROOMSTATE,5,5,65,80
+    PUSHBUTTON      "配置功能",IDC_BTN_CONFIG,94,4,65,80
+    PUSHBUTTON      "统计查询",IDC_BTN_CENSUS,182,6,65,80,NOT WS_VISIBLE
+    PUSHBUTTON      "日志信息",IDC_BTN_LOGINFO,270,5,65,80
+    PUSHBUTTON      "保留",IDC_BTN,358,5,65,80
+    PUSHBUTTON      "退出程序",IDCANCEL,446,5,65,80
+    LTEXT           "",IDC_CUSTOM,2,122,573,239,0,WS_EX_CLIENTEDGE
+END
+
+IDD_MAINREALSTATUS_DIALOG DIALOG  0, 0, 960, 1024
+STYLE DS_SETFONT | WS_CHILD | WS_BORDER
+FONT 10, "宋体"
+BEGIN
+    CONTROL         "List1",IDC_RS_ROOMLIST,"SysListView32",LVS_REPORT | WS_BORDER | WS_TABSTOP,58,14,411,292
+    CONTROL         "Tab1",IDC_RS_ROOMTYPETAB,"SysTabControl32",WS_BORDER,58,2,411,13
+    CTEXT           "0",IDC_ROOM_NUM,6,18,48,14,SS_CENTERIMAGE | SS_SUNKEN
+    LTEXT           "客房总数",IDC_STATIC_ROOM_NUM,3,6,31,8
+    LTEXT           "楼栋楼座",IDC_STATIC_BUILDING,3,42,31,8
+    COMBOBOX        IDC_COMBO_BUILDING,6,52,48,57,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "楼层",IDC_STATIC_FLOOR,3,70,16,8
+    COMBOBOX        IDC_COMBO_FLOOR,6,81,48,57,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Tab1",IDC_TAB_BASIC_ROOMSTATUS,"SysTabControl32",TCS_BUTTONS | TCS_MULTILINE | WS_BORDER,4,119,50,138
+    LTEXT           "基本房态",IDC_STATIC_BASICROOMS,3,105,31,8
+END
+
+IDD_CONFIG_DIALOG DIALOGEX 0, 0, 960, 1024
+STYLE DS_SETFONT | WS_CHILD | WS_BORDER
+FONT 10, "宋体", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "RCU配置",IDC_BTN_RCU,181,232,65,80
+    PUSHBUTTON      "通信配置",IDC_BTN_COMMUNATION,338,143,65,80,NOT WS_VISIBLE
+    PUSHBUTTON      "图片变更",IDC_BTN_PICTURE,338,231,65,80,NOT WS_VISIBLE
+    PUSHBUTTON      "系统设置",IDC_BTN_SYSTEM,40,50,65,80
+    PUSHBUTTON      "用户帐户",IDC_BTN_USEINFO,40,143,65,80
+    PUSHBUTTON      "日常维护",IDC_BTN_MANAGE,40,231,65,80
+    PUSHBUTTON      "公告设置",IDC_BTN_ATTENTION,441,50,65,80,NOT WS_VISIBLE
+    PUSHBUTTON      "匙牌定义",IDC_BTN_KEY,441,143,65,80,NOT WS_VISIBLE
+    PUSHBUTTON      "告警定义",IDC_BTN_WARNNING,441,231,65,80,NOT WS_VISIBLE
+    PUSHBUTTON      "房态配置",IDC_BTN_ROOMSTATUS,277,50,65,80,NOT WS_VISIBLE
+    PUSHBUTTON      "设备配置",IDC_BTN_DEVICE,277,143,65,80,NOT WS_VISIBLE
+    PUSHBUTTON      "自动事件",IDC_BTN_AUTOEVENT,335,51,65,80,NOT WS_VISIBLE
+    PUSHBUTTON      "房类配置",IDC_BTN_ROOMTYPE,183,50,65,80
+    PUSHBUTTON      "客房配置",IDC_BTN_ROOM,182,140,65,80
+    PUSHBUTTON      "客房模式",IDC_BTN_ROOMMODE,277,230,65,80,NOT WS_VISIBLE
+    GROUPBOX        "系统配置",IDC_STATIC_SYSCFG,25,31,97,290
+    GROUPBOX        "客房配置",IDC_STATIC_ROOMINFO,163,31,105,290
+    GROUPBOX        "原始配置",IDC_STATIC_DEFAULT,312,31,214,288,NOT WS_VISIBLE
+END
+
+IDD_WELCOME_DIALOG DIALOG  0, 0, 209, 108
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP
+FONT 12, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "下一步",IDOK,105,90,50,14
+    PUSHBUTTON      "退出",IDCANCEL,157,90,50,14
+    CTEXT           "欢迎进入百牧酒店技术员配置界面",IDC_STATIC,25,7,146,21,SS_CENTERIMAGE
+    CONTROL         "技术员模式",IDC_RADIO_OPERATOR,"Button",BS_AUTORADIOBUTTON | WS_GROUP,30,45,60,10
+    CONTROL         "正常开启",IDC_RADIO_GUEST,"Button",BS_AUTORADIOBUTTON,106,45,60,10
+END
+
+IDD_LOAD_DIALOG DIALOG  0, 0, 72, 82
+STYLE DS_SETFONT | WS_POPUP
+FONT 12, "宋体"
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,2,64,50,14
+    CONTROL         "",IDC_GIF_PICTURE,"Static",SS_BLACKFRAME,0,0,68,56
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "Management.exe"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "Management.exe"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_MANAGEMENT_DIALOG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 575
+        BOTTOMMARGIN, 193
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About Management..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\Management.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

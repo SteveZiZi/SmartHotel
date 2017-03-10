@@ -1,0 +1,254 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\ManufactorCFG.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "ManufactorCFG.dll"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "ManufactorCFG.dll"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ROOMSTATUE_DIALOG DIALOG  0, 0, 426, 338
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "房态设置"
+FONT 12, "宋体"
+BEGIN
+    CONTROL         "Tab1",IDC_TAB_ROOM_STATUS,"SysTabControl32",TCS_BUTTONS,0,1,426,13
+    LTEXT           "房态总数:",IDC_STATIC_ENTRYNUM,11,18,37,8
+    CTEXT           "0",IDC_ENTRYNUM,53,18,29,8,SS_CENTERIMAGE
+    CONTROL         "List1",IDC_LIST_ROOMSTATE,"SysListView32",LVS_REPORT | WS_BORDER | WS_TABSTOP,0,29,426,309
+END
+
+IDD_DEVICE_DIALOG DIALOG  0, 0, 383, 226
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "设备设置"
+FONT 12, "宋体"
+BEGIN
+    CONTROL         "Tab1",IDC_TAB_DEVICECLASS,"SysTabControl32",TCS_BUTTONS,0,1,383,13
+    CONTROL         "List1",IDC_LIST_DEVICE,"SysListView32",LVS_REPORT | LVS_EDITLABELS | WS_BORDER | WS_TABSTOP,1,30,382,196
+    LTEXT           "设备总数:",IDC_STATIC_ENTRYNUM,11,18,37,8
+    CTEXT           "0",IDC_ENTRYNUM,53,18,29,8,SS_CENTERIMAGE
+END
+
+IDD_RCU_DIALOG DIALOGEX 0, 0, 383, 226
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "RCU设置"
+FONT 12, "宋体", 0, 0, 0x1
+BEGIN
+    CONTROL         "Tree1",IDC_TREE_RCU,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,3,3,67,220
+    CONTROL         "Tab1",IDC_TAB_RCU_SETTING,"SysTabControl32",TCS_FOCUSONBUTTONDOWN,72,0,311,15
+    LTEXT           "",IDC_RCU_CUSTOMER,72,17,311,209,0,WS_EX_CLIENTEDGE
+END
+
+IDD_COMMUNICATION_DIALOG DIALOG  0, 0, 383, 226
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "通信设置"
+FONT 12, "宋体"
+BEGIN
+    CONTROL         "Tab1",IDC_TAB_METHOD,"SysTabControl32",TCS_BUTTONS,0,1,383,13
+END
+
+IDD_SUB_RCU_BASEINFO_DIALOG DIALOGEX 0, 0, 311, 209
+STYLE DS_SETFONT | WS_CHILD
+FONT 12, "宋体", 0, 0, 0x0
+BEGIN
+    LTEXT           "方案名称:",-1,48,23,37,8
+    EDITTEXT        IDC_RCU_NAME,87,21,68,12,ES_AUTOHSCROLL
+    LTEXT           "设备总数:",-1,48,42,37,8
+    EDITTEXT        IDC_RCU_RS_NUM,87,40,33,12,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+    PUSHBUTTON      "增加",IDC_BTN_ADD,68,100,34,13
+    PUSHBUTTON      "修改",IDC_BTN_MODIFY,109,100,34,13
+    PUSHBUTTON      "删除",IDC_BTN_DELETE,150,100,34,13
+END
+
+IDD_SUB_RCU_DEVICEPORTS_DIALOG DIALOG  0, 0, 311, 209
+STYLE DS_SETFONT | WS_CHILD
+FONT 12, "宋体"
+BEGIN
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,0,19,311,1
+    LTEXT           "端口总数:",IDC_STATIC,5,6,37,8
+    CTEXT           "0",IDC_TOTAL_PORTNUM,44,6,23,8,SS_CENTERIMAGE
+    COMBOBOX        IDC_COMBO_PORTNUM,97,4,52,83,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_D_S_ENTRY,151,4,52,83,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "增加",IDC_BTN_ADD,209,3,31,13
+    PUSHBUTTON      "修改",IDC_BTN_MODIFY,242,3,31,13
+    PUSHBUTTON      "删除",IDC_BTN_DELETE,275,3,31,13
+    CONTROL         "List1",IDC_LIST_PORT_INFO,"SysListView32",WS_BORDER | WS_TABSTOP,0,22,311,184
+END
+
+IDD_SUB_RCU_ROOMPORTS_DIALOG DIALOG  0, 0, 311, 209
+STYLE DS_SETFONT | WS_CHILD
+FONT 12, "宋体"
+BEGIN
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,0,19,311,1
+    LTEXT           "端口总数:",IDC_STATIC,5,6,37,8
+    CTEXT           "0",IDC_TOTAL_PORTNUM,44,6,23,8,SS_CENTERIMAGE
+    COMBOBOX        IDC_COMBO_PORTNUM,97,4,52,83,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_D_S_ENTRY,151,4,52,83,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "增加",IDC_BTN_ADD,209,3,31,13
+    PUSHBUTTON      "修改",IDC_BTN_MODIFY,242,3,31,13
+    PUSHBUTTON      "删除",IDC_BTN_DELETE,275,3,31,13
+    CONTROL         "List1",IDC_LIST_PORT_INFO,"SysListView32",WS_BORDER | WS_TABSTOP,0,22,311,184
+END
+
+IDD_SUB_DEVICE_AIR_DIALOG DIALOG  0, 0, 383, 197
+STYLE DS_SETFONT | DS_MODALFRAME | WS_CHILD
+FONT 12, "@宋体"
+BEGIN
+END
+
+IDD_SUB_ROOMSTATUS_TEMP_DIALOG DIALOG  0, 0, 383, 197
+STYLE DS_SETFONT | WS_CHILD
+FONT 12, "@宋体"
+BEGIN
+END
+
+IDD_SUB_ROOMSTATUS_SERVICE_DIALOG DIALOG  0, 0, 383, 197
+STYLE DS_SETFONT | WS_CHILD
+FONT 12, "@宋体"
+BEGIN
+END
+
+IDD_SUB_ROOMSTATUS_OTHER_DIALOG DIALOG  0, 0, 383, 197
+STYLE DS_SETFONT | WS_CHILD
+FONT 12, "@宋体"
+BEGIN
+END
+
+IDD_SUB_DEVICE_METHOD_DIALOG DIALOGEX 0, 0, 311, 209
+STYLE DS_SETFONT | WS_CHILD
+FONT 12, "宋体", 0, 0, 0x1
+BEGIN
+    LTEXT           "设备序号:",IDC_STATIC,12,11,37,8
+    COMBOBOX        IDC_COMBO_DEVICE_ENTRY,56,8,57,84,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "设备类型:",IDC_STATIC,138,11,37,8
+    COMBOBOX        IDC_COMBO_DEVICE_TYPE,182,8,65,84,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "子路号:",IDC_STATIC,12,32,29,8
+    COMBOBOX        IDC_COMBO_DEVICE_LUN,56,29,57,84,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "子路名称:",IDC_STATIC,138,31,37,8
+    EDITTEXT        IDC_EDIT_SUB_NAME,182,28,65,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_DATA_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,5,73,304,132
+    PUSHBUTTON      "增加",IDC_BTN_ADD,33,51,50,14
+    PUSHBUTTON      "修改",IDC_BTN_MODIFY,96,51,50,14
+    PUSHBUTTON      "删除",IDC_BTN_DELETE,159,50,50,14
+    CONTROL         "",IDC_PICTURE,"Static",SS_BLACKFRAME | SS_NOTIFY,255,6,48,57
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\ManufactorCFG.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

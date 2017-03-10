@@ -1,0 +1,276 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE  
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE  
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE  
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+	"#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+	"LANGUAGE 4, 2\r\n"
+	"#pragma code_page(936)\r\n"
+    "#include ""res\\RoomDetailCFG.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+#ifndef _AFXDLL
+    "#include ""afxres.rc""  	// Standard components\r\n"
+#endif
+    "#endif\r\n"
+    "\0"
+END
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // APSTUDIO_INVOKED
+
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO     VERSIONINFO
+  FILEVERSION       1,0,0,1
+  PRODUCTVERSION    1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+	BLOCK "StringFileInfo"
+	BEGIN
+        BLOCK "040904e4"
+		BEGIN 
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+			VALUE "FileVersion",     "1.0.0.1"
+			VALUE "InternalName",    "RoomDetailCFG.dll"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+			VALUE "OriginalFilename","RoomDetailCFG.dll"
+            VALUE "ProductName", "TODO: <Product name>"
+			VALUE "ProductVersion",  "1.0.0.1"
+		END
+	END
+	BLOCK "VarFileInfo" 
+	BEGIN 
+		VALUE "Translation", 0x0409, 1252
+    END
+END
+
+#endif
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ROOMTYPE_DIALOG DIALOG DISCARDABLE  0, 0, 383, 226
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "房类设置"
+FONT 12, "宋体"
+BEGIN
+    CONTROL         "Tab1",IDD_TAB_ROOMTYPE,"SysTabControl32",TCS_BUTTONS,0,
+                    1,383,13
+    LTEXT           "房类名称：",IDC_STATIC_ROOMTYPE_NAME,65,52,43,11
+    EDITTEXT        IDC_EDIT_ROOMTYPE_NAME,111,49,69,14,ES_AUTOHSCROLL
+    LTEXT           "RCU 类型：",IDC_STATIC_ROOMTYPE_RCU,65,78,43,11
+    COMBOBOX        IDC_COMBO_RCU_TYPE,111,76,70,92,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "增加",IDC_BTN_ADD,66,110,33,14
+    PUSHBUTTON      "修改",IDC_BTN_MODIFY,108,110,33,14
+    PUSHBUTTON      "删除",IDC_BTN_DELETE,150,110,33,14
+END
+
+IDD_ROOOM_DIALOG DIALOGEX 0, 0, 383, 226
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "客房设置"
+FONT 12, "宋体", 0, 0, 0x1
+BEGIN
+    CONTROL         "Tab1",IDD_TAB_ROOM,"SysTabControl32",TCS_BUTTONS,0,1,
+                    383,13
+    CONTROL         "Tree1",IDC_TREE_BUILDING,"SysTreeView32",TVS_HASLINES | 
+                    TVS_LINESATROOT | WS_BORDER | WS_TABSTOP,2,16,47,208
+    LTEXT           "",IDC_ROOM_CUSTOM,50,16,333,207,0,WS_EX_CLIENTEDGE
+END
+
+IDD_ROOMMODE_DIALOG DIALOG DISCARDABLE  0, 0, 383, 226
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "客房模式"
+FONT 12, "宋体"
+BEGIN
+    CONTROL         "Tab1",IDD_TAB_ROOMMODE,"SysTabControl32",TCS_BUTTONS,0,
+                    1,383,13
+    LTEXT           "模式名称：",IDC_STATIC_ROOMMODE_NAME,52,34,43,11
+    EDITTEXT        IDC_EDIT_ROOMTYPE_NAME,98,33,69,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "增加",IDC_BTN_ADD,52,98,33,14
+    PUSHBUTTON      "修改",IDC_BTN_MODIFY,94,98,33,14
+    PUSHBUTTON      "删除",IDC_BTN_DELETE,136,98,33,14
+END
+
+IDD_AUTOEVENT_DIALOG DIALOG DISCARDABLE  0, 0, 383, 226
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "自动事件"
+FONT 12, "宋体"
+BEGIN
+    CONTROL         "Tab1",IDD_TAB_AUTOEVENT,"SysTabControl32",TCS_BUTTONS,0,
+                    1,383,13
+    LTEXT           "事件名称：",IDC_STATIC_EVENT_NAME,52,34,43,11
+    EDITTEXT        IDC_EDIT_ROOMTYPE_NAME,98,33,69,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "增加",IDC_BTN_ADD,52,98,33,14
+    PUSHBUTTON      "修改",IDC_BTN_MODIFY,94,98,33,14
+    PUSHBUTTON      "删除",IDC_BTN_DELETE,136,98,33,14
+END
+
+IDD_KEYDEF_DIALOG DIALOG DISCARDABLE  0, 0, 383, 226
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "匙牌定义"
+FONT 12, "宋体"
+BEGIN
+    CONTROL         "Tab1",IDD_TAB_KEY_DEFINE,"SysTabControl32",TCS_BUTTONS,
+                    0,1,383,13
+    LTEXT           "匙牌值：",IDC_STATIC_KEY,43,29,43,11
+    EDITTEXT        IDC_EDIT_KEY_VALUE,89,28,69,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "增加",IDC_BTN_ADD,59,154,33,14
+    PUSHBUTTON      "修改",IDC_BTN_MODIFY,101,154,33,14
+    PUSHBUTTON      "删除",IDC_BTN_DELETE,143,154,33,14
+    LTEXT           "匙牌名称：",IDC_STATIC_KEY_NAME,43,49,43,11
+    EDITTEXT        IDC_EDIT_KEY_VALUE2,89,48,69,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_KEY_VIEW,"Static",SS_BLACKFRAME,90,70,65,67
+    LTEXT           "匙牌图片：",IDC_STATIC_KEY_VIEW,43,67,43,11
+END
+
+IDD_WARNNING_DIALOG DIALOG DISCARDABLE  0, 0, 383, 226
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "告警定义"
+FONT 12, "宋体"
+BEGIN
+    CONTROL         "Tab1",IDD_TAB_WARNNING,"SysTabControl32",TCS_BUTTONS,0,
+                    1,383,13
+    LTEXT           "告警名称：",IDC_STATIC_RARNNING_NAME,42,26,43,11
+    EDITTEXT        IDC_EDIT_ROOMTYPE_NAME,88,25,69,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "增加",IDC_BTN_ADD,52,159,33,14
+    PUSHBUTTON      "修改",IDC_BTN_MODIFY,94,159,33,14
+    PUSHBUTTON      "删除",IDC_BTN_DELETE,136,159,33,14
+    CONTROL         "允许告警",IDC_CHECK_ALLOW_WARN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,43,45,93,10
+END
+
+IDD_SUB_ROOM_BUILD_DIALOG DIALOG DISCARDABLE  0, 0, 309, 207
+STYLE WS_CHILD
+FONT 12, "宋体"
+BEGIN
+    LTEXT           "楼座名称：",IDC_STATIC_BUILDING_NAME,63,25,43,11
+    EDITTEXT        IDC_BUILDING_NAME,109,22,69,14,ES_AUTOHSCROLL
+    LTEXT           "显示类型：",IDC_STATIC_SHOWFORMAT,63,51,43,11
+    COMBOBOX        IDC_COMBO_ROOM_SHOW,109,49,70,92,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "增加",IDC_BTN_ADD,63,87,33,14
+    PUSHBUTTON      "修改",IDC_BTN_MODIFY,105,87,33,14
+    PUSHBUTTON      "删除",IDC_BTN_DELETE,147,87,33,14
+END
+
+IDD_SUB_ROOM_DETAIL_DIALOG DIALOG DISCARDABLE  0, 0, 332, 207
+STYLE WS_CHILD
+FONT 12, "宋体"
+BEGIN
+    CONTROL         "List1",IDC_LIST_ROOM,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,0,20,332,187
+    PUSHBUTTON      "增加",IDC_BTN_ADD,298,1,33,14
+    LTEXT           "楼层号:",IDC_STATIC,3,6,29,8
+    EDITTEXT        IDC_EDIT_FLOOR,33,3,22,12,ES_CENTER | ES_AUTOHSCROLL
+    LTEXT           "房号:",IDC_STATIC,67,6,21,8
+    EDITTEXT        IDC_EDIT_ROOM_MIN,88,3,20,12,ES_CENTER | ES_AUTOHSCROLL
+    LTEXT           "--",IDC_STATIC,110,5,9,8
+    EDITTEXT        IDC_EDIT_ROOM_MAX,120,3,20,12,ES_CENTER | ES_AUTOHSCROLL
+    LTEXT           "房类:",IDC_STATIC,151,6,21,8
+    COMBOBOX        IDC_COMBO_ROOMTYPE,174,3,54,89,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_STATIC,"Static",SS_GRAYRECT,0,17,332,1
+    LTEXT           "端口号:",IDC_STATIC,236,5,29,8
+    EDITTEXT        IDC_EDIT_PORT_NUM,266,3,22,12,ES_CENTER | ES_AUTOHSCROLL
+END
+
+IDD_SUB_ROOM_DETAIL_INFO_DIALOG DIALOGEX 0, 0, 232, 67
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "客房详细"
+FONT 12, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确认",IDOK,155,53,35,12
+    PUSHBUTTON      "取消",IDCANCEL,194,53,35,12
+    GROUPBOX        "客房信息",IDC_STATIC,5,4,91,60
+    LTEXT           "楼座：",IDC_STATIC,11,20,25,8
+    LTEXT           "",IDC_BUILDING,39,18,49,12,NOT WS_GROUP,
+                    WS_EX_CLIENTEDGE
+    LTEXT           "楼层：",IDC_STATIC,12,35,25,8
+    LTEXT           "房号：",IDC_STATIC,11,50,26,8
+    EDITTEXT        IDC_EDIT_FLOOR,39,33,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_ROOM,39,47,40,12,ES_AUTOHSCROLL
+    LTEXT           "房态：",IDC_STATIC,106,7,25,8
+    LTEXT           "地址：",IDC_STATIC,106,22,25,8
+    LTEXT           "端口：",IDC_STATIC,106,37,25,8
+    COMBOBOX        IDC_COMBO_ROOM_TYPE,133,5,48,30,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "IPAddress1",IDC_IPADDRESS,"SysIPAddress32",WS_TABSTOP,
+                    133,20,97,13
+    EDITTEXT        IDC_EDIT_PORT,133,35,40,12,ES_AUTOHSCROLL
+END
+
+
+#ifndef APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\\RoomDetailCFG.rc2"  // non-Microsoft Visual C++ edited resources
+#ifndef _AFXDLL
+#include "afxres.rc"  	// Standard components
+#endif
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

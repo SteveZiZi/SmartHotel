@@ -1,0 +1,1 @@
+将导入数据表的文件路径D:\百牧项目\SecondProject_140113\OutPut\start_mysql\备份.sql换成备份好的文件的绝对路径就可以！

@@ -1,0 +1,310 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\SystemInfoCFG.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "SystemInfoCFG.dll"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "SystemInfoCFG.dll"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SYSTEM_DIALOG DIALOGEX 0, 0, 383, 226
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "系统设置"
+FONT 12, "宋体", 0, 0, 0x0
+BEGIN
+    CONTROL         "Tab1",IDD_TAB_SYSTEM_SETTING,"SysTabControl32",TCS_BUTTONS,0,1,383,13
+    LTEXT           "Static",IDC_SYSTEM_SETTING_DIALOG,0,13,383,213
+END
+
+IDD_GUEST_DIALOG DIALOGEX 0, 0, 383, 226
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "用户帐户"
+FONT 12, "宋体", 0, 0, 0x0
+BEGIN
+    CONTROL         "Tab1",IDD_TAB_GUEST,"SysTabControl32",TCS_BUTTONS,0,1,383,13
+    CONTROL         "Tree1",IDC_TREE_DEPARTMENT,"SysTreeView32",WS_BORDER | WS_TABSTOP,0,16,69,210
+    LTEXT           "",IDC_STATIC_GUEST,70,16,313,210
+END
+
+IDD_BACKUP_DIALOG DIALOGEX 0, 0, 383, 226
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "备份和恢复"
+FONT 12, "宋体", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "备份",IDC_BTN_BACKUP,277,8,50,14
+    PUSHBUTTON      "导入",IDC_BTN_IMPORT,331,8,50,14
+    CONTROL         "List1",IDC_LIST_FILE,"SysListView32",LVS_REPORT | WS_BORDER | WS_TABSTOP,2,25,379,201
+END
+
+IDD_PICTURE_DIALOG DIALOG  0, 0, 383, 226
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "图片变更"
+FONT 12, "宋体"
+BEGIN
+    COMBOBOX        IDC_COMBO_PIC_FOLDER,9,6,75,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "List1",IDC_LIST1,"SysListView32",WS_BORDER | WS_TABSTOP,4,23,379,203
+END
+
+IDD_NOTICE_DIALOG DIALOG  0, 0, 383, 226
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "公告设置"
+FONT 12, "宋体"
+BEGIN
+    CONTROL         "Tab1",IDD_TAB_NOTICE_SETTING,"SysTabControl32",TCS_BUTTONS,0,1,383,13
+    LTEXT           "公告词：",IDC_STATIC_NOTICE_NAME,20,18,43,11
+    EDITTEXT        IDC_EDIT_ROOMTYPE_NAME,13,29,355,113,ES_AUTOHSCROLL
+    CONTROL         "允许发出声音",IDC_CHECK_VOICE_EN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,19,148,64,10
+    CTEXT           "间隔：",IDC_STATIC_NOP_NAME,10,164,42,11
+    COMBOBOX        IDC_COMBO_NOP,57,163,52,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CTEXT           "有效时长：",IDC_STATIC_VALID_NAME,10,180,42,11
+    COMBOBOX        IDC_COMBO_VALID_TIME,57,180,52,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "保存",IDC_BTN_SAVE,132,166,50,14
+END
+
+IDD_SYSTEMINFODLG DIALOGEX 0, 0, 401, 213
+STYLE DS_SETFONT | DS_MODALFRAME | WS_CHILD
+FONT 12, "宋体", 400, 0, 0x0
+BEGIN
+    LTEXT           "酒店名称：",IDC_STATIC,115,36,41,8
+    EDITTEXT        IDC_EDIT_HOTEL_NAME,173,33,65,14,ES_AUTOHSCROLL
+    LTEXT           "系统默认语言：",IDC_STATIC,114,58,57,8
+    COMBOBOX        IDC_COM_LANGUAGE,173,56,48,30,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "系统样式：",IDC_STATIC,114,78,41,8
+    COMBOBOX        IDC_COM_STYLE,173,76,48,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "定义入住房态：",IDC_STATIC,114,100,57,8
+    COMBOBOX        IDC_COM_ROOM_STATUS,173,97,48,30,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "定义房门开关：",IDC_STATIC,114,124,57,8,NOT WS_VISIBLE
+    COMBOBOX        IDC_COM_DOOR_SWITCH,173,121,48,30,CBS_DROPDOWN | CBS_SORT | NOT WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "保存",IDC_BTN_SAVE,149,170,50,14
+END
+
+IDD_ROOMSTYLEDLG DIALOGEX 0, 0, 382, 210
+STYLE DS_SETFONT | DS_MODALFRAME | WS_CHILD
+FONT 12, "宋体", 400, 0, 0x0
+BEGIN
+    CONTROL         "门卡状态",IDC_CHECK_DOOR_STATUS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,81,42,48,10
+    CONTROL         "大门门磁",IDC_CHECK_MAGNETISM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,81,59,48,10
+    CONTROL         "电源开关",IDC_CHECK_SUPPLY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,81,76,48,10
+    CONTROL         "清理状态",IDC_CHECK_CLEAN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,81,114,48,10
+    CONTROL         "勿扰状态",IDC_CHECK_NODISTRUCT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,81,133,48,10
+    CONTROL         "稍后状态",IDC_CHECK_WAIT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,81,152,48,10
+    CONTROL         "紧急按钮",IDC_CHECK_EMERGENCY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,81,25,48,10
+    CONTROL         "洗衣服务",IDC_CHECK_WASH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,81,95,48,10
+    CONTROL         "红外检测",IDC_CHECK_INFRARED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,222,25,48,10
+    CONTROL         "服务请求",IDC_CHECK_SERVER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,222,42,48,10
+    CONTROL         "阳台门磁",IDC_CHECK_BALCONY_MAGNETMIS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,222,59,48,10
+    CONTROL         "夜床",IDC_CHECK_BED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,222,76,32,10
+    CONTROL         "保险箱",IDC_CHECK_SAFE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,222,95,40,10
+    CONTROL         "请求退房",IDC_CHECK_CHECKOUT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,222,114,48,10
+    CONTROL         "结账",IDC_CHECK_ACCOUNT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,222,133,32,10
+    CONTROL         "维修中",IDC_CHECK_REPAIR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,222,152,40,10
+    PUSHBUTTON      "保存",IDC_BTN_SAVE,265,173,50,14
+    LTEXT           "请选择临时房态中显示的内容：",IDC_STATIC,17,9,113,8
+END
+
+IDD_ACCOUNT_MANAGEMENT DIALOGEX 0, 0, 316, 208
+STYLE DS_SETFONT | WS_CHILD
+FONT 12, "宋体", 400, 0, 0x0
+BEGIN
+    PUSHBUTTON      "修改密码",IDC_BTN_MODIFY_PASSWORD,196,30,50,14
+    PUSHBUTTON      "增加用户",IDC_BTN_ADD_USER,134,30,50,14
+    PUSHBUTTON      "删除用户",IDC_BTN_DELETE_USER,256,30,50,13
+    CONTROL         "",IDC_LIST_DATA,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,6,51,300,148
+    LTEXT           "用户名：",IDC_STATIC,20,10,33,8
+    EDITTEXT        IDC_EDIT_USER,50,8,64,14,ES_AUTOHSCROLL
+    LTEXT           "密码：",IDC_STATIC,192,10,25,8
+    EDITTEXT        IDC_EDIT_PASSWORD,215,8,63,14,ES_AUTOHSCROLL
+END
+
+IDD_RIGHT_MANAGEMENT DIALOGEX 0, 0, 317, 211
+STYLE DS_SETFONT | WS_CHILD
+FONT 12, "宋体", 400, 0, 0x0
+BEGIN
+    CONTROL         "控制面板",IDC_CHECK_CONTROL_PANEL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,47,43,48,10
+    GROUPBOX        "菜单",IDC_STATIC,21,28,253,35
+    CONTROL         "系统设置",IDC_CHECK_SYSTEM_SETTING,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,46,91,48,10
+    CONTROL         "用户账户",IDC_CHECK_USERACCOUNT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,118,91,48,10
+    CONTROL         "日常维护",IDC_CHECK_DALIY_FIX,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,196,91,48,10
+    GROUPBOX        "控制面板",IDC_STATIC,20,74,253,84
+    CONTROL         "房类配置",IDC_CHECK_ROOM_TYPE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,46,128,48,10
+    CONTROL         "客房配置",IDC_CHECK_ROOM_SETTING,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,118,128,48,10
+    CONTROL         "RCU配置",IDC_CHECK_RCU_SETTING,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,196,128,44,10
+    PUSHBUTTON      "保存权限",IDC_BTN_SAVE,244,180,50,14
+END
+
+IDD_LAND_RECORD DIALOGEX 0, 0, 316, 200
+STYLE DS_SETFONT | WS_CHILD
+FONT 12, "宋体", 400, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_RECORD_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,13,25,287,171
+    PUSHBUTTON      "查询",IDC_BTN_INQUIRY,192,3,50,14
+    PUSHBUTTON      "删除",IDC_BTN_DELETE,251,3,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_SYSTEMINFODLG DLGINIT
+BEGIN
+    IDC_COM_LANGUAGE, 0x403, 5, 0
+0xd0d6, 0xc4ce, "\000" 
+    IDC_COM_STYLE, 0x403, 9, 0
+0xacc4, 0xcfc8, 0xf9d1, 0xbdca, "\000" 
+    IDC_COM_ROOM_STATUS, 0x403, 5, 0
+0xd5bf, 0xc3d6, "\000" 
+    IDC_COM_ROOM_STATUS, 0x403, 5, 0
+0xa4d4, 0xa8b6, "\000" 
+    IDC_COM_ROOM_STATUS, 0x403, 5, 0
+0xfdb4, 0xa1d7, "\000" 
+    IDC_COM_ROOM_STATUS, 0x403, 5, 0
+0xebc8, 0xa1d7, "\000" 
+    IDC_COM_ROOM_STATUS, 0x403, 5, 0
+0xcbcd, 0xbfb7, "\000" 
+    IDC_COM_DOOR_SWITCH, 0x403, 5, 0
+0xbfb7, 0xc5c3, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ACCOUNT_MANAGEMENT, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 206
+    END
+
+    IDD_LAND_RECORD, DIALOG
+    BEGIN
+        TOPMARGIN, 2
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\SystemInfoCFG.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

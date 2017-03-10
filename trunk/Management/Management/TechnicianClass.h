@@ -1,0 +1,19 @@
+// TechnicianClass.h: interface for the CTechnicianClass class.
+//
+//////////////////////////////////////////////////////////////////////
+#pragma once
+//////////////////////////////////////////////////////////////////////////
+#define TECHNICIAN_API __declspec(dllimport)
+//////////////////////////////////////////////////////////////////////////
+class TECHNICIAN_API CTechnicianClass  
+{
+public:
+	int LoadMainFrame();
+public:
+
+	CTechnicianClass();
+	virtual ~CTechnicianClass();
+
+};
+
+#pragma comment(lib,"TechnicianModule.lib")
